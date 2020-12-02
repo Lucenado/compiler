@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <string.h>
+#include <stdio.h>
+#include <vector>
+#include <sstream>
 
 #include "input.hpp"
 #include "expression.hpp"
