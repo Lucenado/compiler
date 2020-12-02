@@ -5,7 +5,10 @@ using namespace std;
 
 enum Type
 {
-    NUMBER
+    NUMBER,
+    ARITHMETIC,
+    DELIMITER,
+    SPECIAL,
 };
 
 class Expression
@@ -24,11 +27,32 @@ class Expression
 
                 switch(c)
                 {
+                    case '%':
+                    case '+':
+                    case '-':
+                    case '/':
+                    case '*':
+                        t = ARITHMETIC;
+                        break;
+                    case ';':
+                    case ',':
+                        t = DELIMITER;
+                        break;
+                    case '{':
+                    case '}':
+                    case '[':
+                    case ']':
+                    case '(':
+                    case ')':
+                    case '"':
+                        t = SPECIAL;
+                        break;
                     default:
                         if (isdigit(c))
                         {
                             t = NUMBER;
                         }
+                        break;
                 }
             }
         }
