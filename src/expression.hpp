@@ -16,7 +16,7 @@ class Expression
         void classify()
         {
             char c;
-            string type;
+            Type t;
 
             for(int index=0; index <= input.size()-1; index++) {
                 c = input[index];
@@ -26,7 +26,7 @@ class Expression
                     default:
                         if (isdigit(c))
                         {
-                            type = NUMBER;
+                            t = NUMBER;
                         }
                 }
             }
@@ -36,7 +36,6 @@ class Expression
         Expression(string userInput)
         {
             input = userInput;
-            Type t;
         };
 };
 
