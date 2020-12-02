@@ -18,7 +18,8 @@ class Expression
             char c;
             Type t;
 
-            for(int index=0; index <= input.size()-1; index++) {
+            for(int index=0; index <= input.size()-1; index++)
+            {
                 c = input[index];
 
                 switch(c)
