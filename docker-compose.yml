@@ -1,0 +1,7 @@
+version: "2"
+
+services:
+    compilador:
+        container_name: compilador
+        image: compilador
+        build: .
